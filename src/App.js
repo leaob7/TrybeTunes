@@ -1,8 +1,14 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Main from './pages/Main';
 
 class App extends React.Component {
   render() {
-    return (<p>TrybeTunes</p>);
+    return (
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
+    );
   }
 }
 
