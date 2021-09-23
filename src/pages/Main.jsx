@@ -17,8 +17,8 @@ class Main extends React.Component {
           <Route path="/search" component={ Search } />
           <Route path="/album/:id" render={ (props) => <Album { ...props } /> } />
           <Route path="/favorites" component={ Favorites } />
-          <Route path="/profile" component={ Profile } />
           <Route path="/profile/edit" component={ ProfileEdit } />
+          <Route path="/profile" component={ Profile } />
           {/* Mapas nao roteadas devem receber componente NotFound */}
           <Route path="" component={ NotFound } />
         </Switch>
