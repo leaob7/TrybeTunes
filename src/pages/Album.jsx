@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
@@ -63,5 +64,9 @@ class Album extends React.Component {
     );
   }
 }
+
+Album.propTypes = {
+  match: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default Album;

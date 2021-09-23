@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Loading from '../pages/Loading';
 import { addSong } from '../services/favoriteSongsAPI';
 
@@ -45,3 +46,10 @@ export default class MusicCard extends React.Component {
     );
   }
 }
+
+MusicCard.propTypes = {
+  checkObj: PropTypes.arrayOf(PropTypes.object).isRequired,
+  id: PropTypes.string.isRequired,
+  trackName: PropTypes.string.isRequired,
+  previewUrl: PropTypes.string.isRequired,
+};
