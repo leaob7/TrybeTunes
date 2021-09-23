@@ -88,7 +88,8 @@ class Search extends React.Component {
             <h3>{card.collectionName}</h3>
             <p>{card.artistName}</p>
             <Link
-              to={ `/album/${card.collectionId}` }
+              to={ { pathname: `/album/${card.collectionId}`,
+                state: `${card.collectionId}` } }
               data-testid={ `link-to-album-${card.collectionId}` }
             >
               Álbum completo

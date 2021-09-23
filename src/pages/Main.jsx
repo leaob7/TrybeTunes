@@ -15,7 +15,7 @@ class Main extends React.Component {
         <Switch>
           <Route exact path="/" component={ Login } />
           <Route path="/search" component={ Search } />
-          <Route path="/album/:id" component={ Album } />
+          <Route path="/album/:id" render={ (props) => <Album { ...props } /> } />
           <Route path="/favorites" component={ Favorites } />
           <Route path="/profile" component={ Profile } />
           <Route path="/profile/edit" component={ ProfileEdit } />
