@@ -56,6 +56,7 @@ class Album extends React.Component {
             id={ music.trackId }
             trackName={ music.trackName }
             previewUrl={ music.previewUrl }
+            checkObj={ infoList.filter((song) => song === music) }
           />
         )) : null}
       </section>

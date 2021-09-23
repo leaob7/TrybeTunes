@@ -10,10 +10,21 @@ export default class MusicCard extends React.Component {
     };
   }
 
-  audioCards = () => {
+  onClick = async () => {
+    const { checkObj } = this.props;
+    this.setState({ loading: true });
+    await addSong(checkObj[0]);
+    this.setState({
+      loading: false,
+    });
+  }
+
+  render() {
     const { id, trackName, previewUrl } = this.props;
+    const { loading } = this.state;
     return (
       <section key={ trackName }>
+        {loading && <Loading />}
         <p>{trackName}</p>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
@@ -21,20 +32,16 @@ export default class MusicCard extends React.Component {
           <code>audio</code>
         </audio>
 
-        <label htmlFor={ id } data-testid={ `checkbox-music-${id}` }>
+        <label htmlFor="favorita">
           Favorita
-          <input value={ id } type="checkbox" />
+          <input
+            id="favorita"
+            data-testid={ `checkbox-music-${id}` }
+            type="checkbox"
+            onChange={ this.onClick }
+          />
         </label>
-
       </section>
-    );
-  }
-
-  render() {
-    return (
-      <>
-        {this.audioCards()}
-      </>
     );
   }
 }
