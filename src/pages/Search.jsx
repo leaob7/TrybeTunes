@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
 import '../styles/Search/search.css';
+import AlbumCard from '../components/AlbumCard';
 
 class Search extends React.Component {
   constructor() {
@@ -88,20 +89,11 @@ class Search extends React.Component {
           {/* Card de albuns */}
           {searchDone === true && albumList.length === 0 ? (
             <p>Nenhum álbum foi encontrado</p>
-          ) : (albumList.map((card) => (
-            <li key={ card.collectionId }>
-              <img src={ card.artworkUrl100 } alt={ card.collectionName } />
-              <h3>{card.collectionName}</h3>
-              <p>{card.artistName}</p>
-              <Link
-                to={ { pathname: `/album/${card.collectionId}`,
-                  state: `${card.collectionId}` } }
-                data-testid={ `link-to-album-${card.collectionId}` }
-              >
-                Álbum completo
-              </Link>
-            </li>
-          )))}
+          ) : (
+            <section>
+              <AlbumCard albumList={ albumList } />
+            </section>
+          )}
         </body>
       </>
     );
