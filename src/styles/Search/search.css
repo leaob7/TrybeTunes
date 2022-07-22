@@ -1,3 +1,4 @@
+/* stylelint-disable color-named */
 body {
   background-color: #000;
   color: #fff;
@@ -28,8 +29,8 @@ body {
 }
 
 .form-container button:hover {
-  cursor: pointer;
   background-color: rgb(30, 165, 48);
+  cursor: pointer;
 }
 
 .albuns-title {
