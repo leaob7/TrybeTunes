@@ -1,0 +1,29 @@
+.album-card {
+  border: 1px solid rgb(30, 165, 48);
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.banner {
+  align-items: center;
+  display: flex;
+}
+
+.album-infos {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.album-infos p {
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+.album-infos a {
+  color: rgb(30, 165, 48);
+  font-weight: 700;
+  text-decoration: none;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../styles/AlbumCard/album-card.css';
 
 export default class AlbumCard extends React.Component {
   render() {
@@ -8,21 +9,29 @@ export default class AlbumCard extends React.Component {
 
     return (
       albumList.map((card) => (
-        <li key={ card.collectionId }>
+        <li key={ card.collectionId } className="album-card">
 
-          <img src={ card.artworkUrl100 } alt={ card.collectionName } />
+          <div className="banner">
 
-          <h3>{card.collectionName}</h3>
+            <img src={ card.artworkUrl100 } alt={ card.collectionName } />
 
-          <p>{card.artistName}</p>
+          </div>
 
-          <Link
-            to={ { pathname: `/album/${card.collectionId}`,
-              state: `${card.collectionId}` } }
-            data-testid={ `link-to-album-${card.collectionId}` }
-          >
-            Álbum completo
-          </Link>
+          <div className="album-infos">
+
+            <h3>{card.collectionName}</h3>
+
+            <p>{card.artistName}</p>
+
+            <Link
+              to={ { pathname: `/album/${card.collectionId}`,
+                state: `${card.collectionId}` } }
+              data-testid={ `link-to-album-${card.collectionId}` }
+            >
+              Álbum completo
+            </Link>
+
+          </div>
 
         </li>
       ))

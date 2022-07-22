@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
@@ -44,7 +43,7 @@ class Search extends React.Component {
       loading: false,
       albumList: lista,
       isClicked: true,
-      resultText: `Resultado de álbuns de: ${input}`,
+      resultText: `Resultado de álbuns de : ${input}`,
       input: '',
     });
   }
@@ -81,7 +80,7 @@ class Search extends React.Component {
 
           {/* Resultados titulo */}
           {isClicked === true ? (
-            <p>
+            <p className="albuns-title">
               { resultText }
             </p>
           ) : null}
@@ -90,7 +89,7 @@ class Search extends React.Component {
           {searchDone === true && albumList.length === 0 ? (
             <p>Nenhum álbum foi encontrado</p>
           ) : (
-            <section>
+            <section className="albuns-container">
               <AlbumCard albumList={ albumList } />
             </section>
           )}
