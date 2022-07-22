@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../styles/Login/login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -33,24 +34,31 @@ class Login extends React.Component {
     if (redirect === true) { return <Redirect to="/search" />; }
     if (loading === true) { return <Loading />; }
     return (
-      <div data-testid="page-login">
-        <form>
-          <input
-            value={ input }
-            type="text"
-            data-testid="login-name-input"
-            onChange={ this.handleInput }
-          />
-          <button
-            type="submit"
-            data-testid="login-submit-button"
-            disabled={ input.length < inputMin }
-            onClick={ this.handleSubmit }
-          >
-            Entrar
-          </button>
-        </form>
-      </div>
+      <body className="login-body">
+        <div data-testid="page-login" className="login-container">
+
+          <form className="login-form">
+            <h2>Trybetunes</h2>
+            <input
+              value={ input }
+              type="text"
+              data-testid="login-name-input"
+              placeholder="username"
+              onChange={ this.handleInput }
+            />
+            <button
+              type="submit"
+              data-testid="login-submit-button"
+              disabled={ input.length < inputMin }
+              onClick={ this.handleSubmit }
+            >
+              Entrar
+            </button>
+          </form>
+
+        </div>
+
+      </body>
     );
   }
 }
