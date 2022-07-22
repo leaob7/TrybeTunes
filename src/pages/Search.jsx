@@ -58,10 +58,11 @@ class Search extends React.Component {
         <body className="search-body">
           <div data-testid="page-search">
             {loading === true ? <Loading /> : (
-              <form>
+              <form className="form-container">
                 <input
                   type="text"
                   value={ input }
+                  placeholder="Procure por um artista"
                   data-testid="search-artist-input"
                   onChange={ this.handleInput }
                 />
@@ -77,12 +78,14 @@ class Search extends React.Component {
             )}
           </div>
 
+          {/* Resultados titulo */}
           {isClicked === true ? (
             <p>
               { resultText }
             </p>
           ) : null}
 
+          {/* Card de albuns */}
           {searchDone === true && albumList.length === 0 ? (
             <p>Nenhum álbum foi encontrado</p>
           ) : (albumList.map((card) => (

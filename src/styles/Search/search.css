@@ -1,1 +1,29 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.form-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  margin-right: 20px;
+}
+
+.form-container input {
+  border-radius: 15px;
+  font-size: 1.5em;
+  height: 30px;
+  margin-right: 15px;
+  width: 300px;
+}
+
+.form-container button {
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 1em;
+  color: #000;
+  height: 30px;
+}
 
