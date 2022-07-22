@@ -1,0 +1,33 @@
+.header {
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 5em;
+  justify-content: center;
+}
+
+.header p {
+  padding-bottom: 20px;
+}
+
+.nav-container {
+  display: flex;
+  font-size: 15px;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-container a {
+  color: #fff;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+
+.nav-container a:hover {
+  color: #a8a8a8;
+}
+
