@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Loading from '../pages/Loading';
 import { addSong } from '../services/favoriteSongsAPI';
+import '../styles/MusicCard/music-card.css';
 
 export default class MusicCard extends React.Component {
   constructor() {
@@ -24,24 +25,32 @@ export default class MusicCard extends React.Component {
     const { id, trackName, previewUrl } = this.props;
     const { loading } = this.state;
     return (
-      <section key={ trackName }>
-        {loading && <Loading />}
-        <p>{trackName}</p>
-        <audio data-testid="audio-component" src={ previewUrl } controls>
-          <track kind="captions" />
-          O seu navegador não suporta o elemento
-          <code>audio</code>
-        </audio>
+      <section key={ trackName } className="music-container">
 
-        <label htmlFor="favorita">
-          Favorita
-          <input
-            id="favorita"
-            data-testid={ `checkbox-music-${id}` }
-            type="checkbox"
-            onChange={ this.onClick }
-          />
-        </label>
+        {loading && <Loading />}
+
+        <h4>{trackName}</h4>
+
+        <div className="song-and-fav">
+
+          <audio data-testid="audio-component" src={ previewUrl } controls>
+            <track kind="captions" />
+            O seu navegador não suporta o elemento
+            <code>audio</code>
+          </audio>
+
+          <label htmlFor="favorita">
+            Favorita
+            <input
+              id="favorita"
+              data-testid={ `checkbox-music-${id}` }
+              type="checkbox"
+              onChange={ this.onClick }
+            />
+          </label>
+
+        </div>
+
       </section>
     );
   }

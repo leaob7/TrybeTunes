@@ -1,0 +1,25 @@
+.music-container {
+  align-items: center;
+  border: 1px solid rgb(30, 165, 48);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.music-container h4 {
+  margin: 20px;
+}
+
+.song-and-fav {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.song-and-fav audio {
+  height: 60px;
+  margin-right: 50px;
+  width: 150px;
+}

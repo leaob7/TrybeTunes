@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 import Loading from './Loading';
+import '../styles/Album/album.css';
 
 class Album extends React.Component {
   constructor() {
@@ -41,7 +42,7 @@ class Album extends React.Component {
       <section data-testid="page-album">
         <Header />
         {isCalled && (
-          <section>
+          <section className="album-titles">
             <h3 data-testid="artist-name">
               {infoList[0].artistName}
             </h3>
