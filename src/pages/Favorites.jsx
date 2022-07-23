@@ -3,11 +3,13 @@ import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
+import '../styles/Favorites/favorites.css';
 
 class Favorites extends React.Component {
   constructor() {
     super();
     this.state = {
+      favoriteSongs: [],
       loading: false,
       searchDone: false,
     };
@@ -19,20 +21,33 @@ class Favorites extends React.Component {
 
   searchFav = async () => {
     this.setState({ loading: true });
-    await getFavoriteSongs;
+    const favorites = await getFavoriteSongs();
     this.setState({
+      favoriteSongs: favorites,
       loading: false,
       searchDone: true,
     });
   }
 
   render() {
-    const { searchDone, loading } = this.state;
+    const { searchDone, loading, favoriteSongs } = this.state;
     if (loading) return <Loading />;
     return (
       <div data-testid="page-favorites">
         <Header />
-        {searchDone && <MusicCard />}
+
+        <section className="favorite-list">
+          {searchDone && favoriteSongs.map((music, index) => (
+            <MusicCard
+              key={ index }
+              id={ music.trackId }
+              trackName={ music.trackName }
+              previewUrl={ music.previewUrl }
+              checkObj={ favoriteSongs.filter((song) => song === music) }
+            />
+          ))}
+        </section>
+
       </div>
     );
   }
