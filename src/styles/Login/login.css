@@ -1,5 +1,6 @@
+/* stylelint-disable color-named */
 .login-body {
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
 }
 
@@ -24,19 +25,20 @@
 .login-form input {
   background-color: #fff;
   border-radius: 15px;
-  color: #000000;
+  color: #000;
   font-size: 1.5em;
   font-style: italic;
   height: 20px;
+  margin: 25px;
+  text-align: center;
   width: 170px;
 }
 
 .login-form button {
   background-color: #fff;
   border-radius: 15px;
-  color: #000000;
+  color: #000;
   height: 25px;
-  margin-top: 20px;
   width: 80px;
 }
 
