@@ -27,8 +27,6 @@ export default class MusicCard extends React.Component {
     return (
       <section key={ trackName } className="music-container">
 
-        {loading && <Loading />}
-
         <h4>{trackName}</h4>
 
         <div className="song-and-fav">
@@ -40,7 +38,7 @@ export default class MusicCard extends React.Component {
           </audio>
 
           <label htmlFor="favorita">
-            Favorita
+            <p>Salvar nos favoritos</p>
             <input
               id="favorita"
               data-testid={ `checkbox-music-${id}` }

@@ -23,3 +23,13 @@
   margin-right: 50px;
   width: 150px;
 }
+
+.song-and-fav label {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-and-fav label input {
+  margin-top: 10px;
+}
