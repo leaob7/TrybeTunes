@@ -1,0 +1,10 @@
+.loading-container {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.loading-container h1 {
+  margin: 20px;
+}
