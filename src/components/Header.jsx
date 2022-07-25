@@ -47,7 +47,7 @@ class Header extends React.Component {
           <Link
             to="/search"
             data-testid="link-to-search"
-            className={ pathname === '/search' ? 'search-nav' : null }
+            className={ pathname === '/search' && 'search-nav' }
           >
             Pesquisa
           </Link>
@@ -63,7 +63,7 @@ class Header extends React.Component {
           <Link
             to="/profile"
             data-testid="link-to-profile"
-            className={ pathname === '/profile' ? 'profile-nav' : null }
+            className={ pathname === '/profile' && 'profile-nav' }
           >
             Perfil
           </Link>
