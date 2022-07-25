@@ -1,0 +1,30 @@
+.profile-section {
+  border: 1px solid green;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  margin: auto;
+  margin-top: 5em;
+  width: 80%;
+}
+
+.edit-and-logo {
+  align-items: center;
+  display: flex;
+  margin: 10px 0 10px 20px;
+}
+
+.edit-and-logo img {
+  height: 70px;
+  margin-right: 5em;
+  width: 70px;
+}
+
+.edit-and-logo button {
+  height: 20px;
+}
+
+.profile-section h4 {
+  margin: 10px 0 10px 20px;
+}

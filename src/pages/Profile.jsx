@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
+import '../styles/Profile/profile.css';
+import UserLogo from '../utils/profileLogo';
 
 class Profile extends React.Component {
   render() {
@@ -8,13 +10,16 @@ class Profile extends React.Component {
         <Header />
         <section className="profile-section">
 
-          <div className="username-and-logo">
-            <img src="" alt="" />
-            <h4>User</h4>
+          <div className="edit-and-logo">
+            <img src={ UserLogo } alt="" />
+            <button type="button">
+              Editar perfil
+            </button>
           </div>
 
-          <h4>Email</h4>
-          <h4>Descrição</h4>
+          <h4>Nome</h4>
+          <h4>Email: </h4>
+          <h4>Descrição: </h4>
         </section>
       </div>
     );
