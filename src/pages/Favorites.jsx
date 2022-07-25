@@ -43,6 +43,7 @@ class Favorites extends React.Component {
               id={ music.trackId }
               trackName={ music.trackName }
               previewUrl={ music.previewUrl }
+              artworkUrl100={ music.artworkUrl100 }
               checkObj={ favoriteSongs.filter((song) => song === music) }
             />
           ))}

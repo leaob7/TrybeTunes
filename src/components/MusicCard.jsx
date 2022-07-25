@@ -22,7 +22,7 @@ export default class MusicCard extends React.Component {
   }
 
   render() {
-    const { id, trackName, previewUrl } = this.props;
+    const { id, trackName, previewUrl, artworkUrl100 } = this.props;
     const { loading } = this.state;
     return (
       <section key={ trackName } className="music-container">
@@ -31,6 +31,8 @@ export default class MusicCard extends React.Component {
 
         <div className="song-and-fav">
 
+          <img src={ artworkUrl100 } alt={ trackName } />
+
           <audio data-testid="audio-component" src={ previewUrl } controls>
             <track kind="captions" />
             O seu navegador não suporta o elemento
@@ -38,7 +40,6 @@ export default class MusicCard extends React.Component {
           </audio>
 
           <label htmlFor="favorita">
-            <p>Salvar nos favoritos</p>
             <input
               id="favorita"
               data-testid={ `checkbox-music-${id}` }
@@ -59,4 +60,5 @@ MusicCard.propTypes = {
   id: PropTypes.string.isRequired,
   trackName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
+  artworkUrl100: PropTypes.string.isRequired,
 };

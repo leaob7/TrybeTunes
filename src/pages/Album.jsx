@@ -58,6 +58,7 @@ class Album extends React.Component {
             id={ music.trackId }
             trackName={ music.trackName }
             previewUrl={ music.previewUrl }
+            artworkUrl100={ music.artworkUrl100 }
             checkObj={ infoList.filter((song) => song === music) }
           />
         )) : null}
