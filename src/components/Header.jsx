@@ -36,6 +36,7 @@ class Header extends React.Component {
   render() {
     const { nome, loading } = this.state;
     if (loading === true) { return <Loading />; }
+    const { pathname } = location;
 
     return (
       <header data-testid="header-component" className="header">
@@ -43,9 +44,29 @@ class Header extends React.Component {
           { nome }
         </p>
         <nav className="nav-container">
-          <Link to="/search" data-testid="link-to-search"> Pesquisa </Link>
-          <Link to="/favorites" data-testid="link-to-favorites"> Favoritas </Link>
-          <Link to="/profile" data-testid="link-to-profile"> Perfil </Link>
+          <Link
+            to="/search"
+            data-testid="link-to-search"
+            className={ pathname === '/search' ? 'search-nav' : null }
+          >
+            Pesquisa
+          </Link>
+
+          <Link
+            to="/favorites"
+            data-testid="link-to-favorites"
+            className={ pathname === '/favorites' && 'favorites-nav' }
+          >
+            Favoritas
+          </Link>
+
+          <Link
+            to="/profile"
+            data-testid="link-to-profile"
+            className={ pathname === '/profile' ? 'profile-nav' : null }
+          >
+            Perfil
+          </Link>
         </nav>
 
       </header>
