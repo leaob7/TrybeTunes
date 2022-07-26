@@ -49,3 +49,14 @@
   font-weight: 900;
 }
 
+
+@media screen and ( min-width : 1332px ) {
+
+  .header p {
+    font-size: 2rem;
+  }
+
+  .nav-container {
+    font-size: 1.5rem;
+  }
+}

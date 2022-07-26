@@ -36,6 +36,7 @@ class Header extends React.Component {
   render() {
     const { nome, loading } = this.state;
     if (loading === true) { return <Loading />; }
+    // eslint-disable-next-line no-restricted-globals
     const { pathname } = location;
 
     return (
