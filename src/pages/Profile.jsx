@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 import { getUser } from '../services/userAPI';
 import '../styles/Profile/profile.css';
@@ -9,6 +10,7 @@ class Profile extends React.Component {
     super();
     this.state = {
       username: '',
+      editClicked: false,
     };
   }
 
@@ -22,7 +24,10 @@ class Profile extends React.Component {
   }
 
   render() {
-    const { username } = this.state;
+    const { username, editClicked } = this.state;
+
+    if (editClicked) return <Redirect to="/profile/edit" />;
+
     return (
       <div data-testid="page-profile">
         <Header />
@@ -30,7 +35,7 @@ class Profile extends React.Component {
 
           <div className="edit-and-logo">
             <img src={ UserLogo } alt="" />
-            <button type="button">
+            <button type="button" onClick={ () => this.setState({ editClicked: true }) }>
               Editar perfil
             </button>
           </div>
