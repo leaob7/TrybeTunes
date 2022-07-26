@@ -20,16 +20,17 @@ body {
 }
 
 .form-container button {
-  background-color: #fff;
+  background-color: rgb(30, 165, 48);
   border-radius: 15px;
   color: #000;
   font-size: 0.7em;
+  font-weight: 500;
   height: 30px;
   width: 80px;
 }
 
 .form-container button:hover {
-  background-color: rgb(30, 165, 48);
+  background-color: #fff;
   cursor: pointer;
 }
 
