@@ -1,29 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Loading from '../pages/Loading';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import '../styles/MusicCard/music-card.css';
 
 export default class MusicCard extends React.Component {
   constructor() {
     super();
-    this.state = {
-      loading: false,
-    };
+    this.state = {};
   }
 
   onClick = async () => {
     const { checkObj } = this.props;
-    this.setState({ loading: true });
-    await addSong(checkObj[0]);
-    this.setState({
-      loading: false,
-    });
+    const { pathname } = window.location;
+
+    if (pathname === '/favorites') {
+      await removeSong(checkObj[0]);
+      const refresh = window.location.reload();
+      refresh();
+    } else {
+      await addSong(checkObj[0]);
+    }
   }
 
   render() {
     const { id, trackName, previewUrl, artworkUrl100 } = this.props;
-    const { loading } = this.state;
     return (
       <section key={ trackName } className="music-container">
 
