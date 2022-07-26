@@ -33,16 +33,3 @@
   text-align: center;
   width: 170px;
 }
-
-.login-form button {
-  background-color: #fff;
-  border-radius: 15px;
-  color: #000;
-  height: 25px;
-  width: 80px;
-}
-
-.login-form button:hover {
-  background-color: rgb(106, 184, 91);
-  cursor: pointer;
-}

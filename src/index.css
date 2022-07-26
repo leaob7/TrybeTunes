@@ -12,6 +12,21 @@ code {
     monospace;
 }
 
+button {
+  background-color: rgb(30, 165, 48);
+  border-radius: 15px;
+  color: #000;
+  font-size: 0.7em;
+  font-weight: 500;
+  height: 30px;
+  width: 80px;
+}
+
+button:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
 .loading {
   align-items: center;
   display: flex;
