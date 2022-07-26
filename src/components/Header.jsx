@@ -48,7 +48,10 @@ class Header extends React.Component {
           <Link
             to="/search"
             data-testid="link-to-search"
-            className={ pathname === '/search' && 'search-nav' }
+            className={
+              pathname === '/search' || pathname.includes('/album')
+                ? 'search-nav' : null
+            }
           >
             Pesquisa
           </Link>
