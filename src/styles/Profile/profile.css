@@ -16,17 +16,18 @@
 .edit-and-logo {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   margin: 10px 0 10px 20px;
 }
 
 .edit-and-logo img {
   height: 70px;
-  margin-right: 5em;
   width: 70px;
 }
 
 .edit-and-logo button {
   height: 20px;
+  margin-right: 3em;
 }
 
 .description {
@@ -35,4 +36,21 @@
 
 .description h4 {
   margin: 0 0 10px;
+}
+
+@media screen and ( min-width : 760px ) {
+
+  .profile-section {
+    width: 50%;
+  }
+
+}
+
+@media screen and ( min-width : 1332px ) {
+
+  .profile-section {
+    margin-top: 6em;
+    width: 30%;
+  }
+
 }
