@@ -67,7 +67,9 @@ class Header extends React.Component {
           <Link
             to="/profile"
             data-testid="link-to-profile"
-            className={ pathname === '/profile' && 'profile-nav' }
+            className={
+              pathname.includes('/profile') && 'profile-nav'
+            }
           >
             Perfil
           </Link>

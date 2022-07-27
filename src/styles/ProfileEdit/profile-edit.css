@@ -1,0 +1,60 @@
+.edit-user-form {
+  align-items: center;
+  border: 2px solid green;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5em;
+  width: 80%;
+}
+
+.edit-user-form label {
+  margin: 20px 0 10px 10px;
+}
+
+.edit-user-form label p, textarea {
+  margin-bottom: 0.5em;
+}
+
+.edit-user-form input, textarea {
+  border-radius: 10px;
+  font-size: 1em;
+  resize: none;
+}
+
+.edit-user-form textarea {
+  height: 4em;
+  width: 15.5em;
+}
+
+.edit-user-form button {
+  align-self: center;
+  margin-bottom: 2.5em;
+}
+
+@media screen and ( min-width : 760px ) {
+
+  .edit-user-form {
+    width: 40%;
+  }
+
+  .edit-user-form button {
+    height: 3em;
+  }
+
+  .edit-user-form input {
+    height: 2vw;
+  }
+
+}
+
+@media screen and ( min-width : 1332px ) {
+
+  .edit-user-form {
+    margin-top: 6em;
+    width: 25%;
+  }
+
+}
