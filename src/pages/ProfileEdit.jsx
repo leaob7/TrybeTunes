@@ -65,6 +65,7 @@ class ProfileEdit extends React.Component {
                 id="description-area"
                 placeholder="Sobre mim"
                 name="description"
+                maxLength={ 50 }
                 onChange={ this.handleUserValues }
               />
             </label>
