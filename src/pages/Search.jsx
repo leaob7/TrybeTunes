@@ -51,50 +51,50 @@ class Search extends React.Component {
   render() {
     const { input, loading, searchDone, albumList, isClicked, resultText } = this.state;
     const MINIMUN_INPUT = 2;
-    // if (loading === true) { return <Loading />; }
+    if (loading === true) { return <Loading />; }
     return (
-      <>
+      <body className="search-body">
         <Header />
-        <body className="search-body">
-          <div data-testid="page-search">
-            {loading === true ? <Loading /> : (
-              <form className="form-container">
-                <input
-                  type="text"
-                  value={ input }
-                  placeholder="Procure por um artista"
-                  data-testid="search-artist-input"
-                  onChange={ this.handleInput }
-                />
-                <button
-                  type="button"
-                  data-testid="search-artist-button"
-                  disabled={ input.length < MINIMUN_INPUT }
-                  onClick={ this.handleSubmit }
-                >
-                  Pesquisar
-                </button>
-              </form>
-            )}
-          </div>
 
-          {/* Resultados titulo */}
-          {isClicked === true ? (
-            <p className="albuns-title">
-              { resultText }
-            </p>
-          ) : null}
-
-          {/* Card de albuns */}
-          {searchDone === true && albumList.length === 0 ? (
-            <p>Nenhum álbum foi encontrado</p>
-          ) : (
-            <section className="albuns-container">
-              <AlbumCard albumList={ albumList } />
-            </section>
+        <div data-testid="page-search">
+          {loading === true ? <Loading /> : (
+            <form className="form-container">
+              <input
+                type="text"
+                value={ input }
+                placeholder="Procure por um artista"
+                data-testid="search-artist-input"
+                onChange={ this.handleInput }
+              />
+              <button
+                type="button"
+                data-testid="search-artist-button"
+                disabled={ input.length < MINIMUN_INPUT }
+                onClick={ this.handleSubmit }
+              >
+                Pesquisar
+              </button>
+            </form>
           )}
-        </body>
-      </>
+        </div>
+
+        {/* Resultados titulo */}
+        {isClicked === true ? (
+          <p className="albuns-title">
+            { resultText }
+          </p>
+        ) : null}
+
+        {/* Card de albuns */}
+        {searchDone === true && albumList.length === 0 ? (
+          <p>Nenhum álbum foi encontrado</p>
+        ) : (
+          <section className="albuns-container">
+            <AlbumCard albumList={ albumList } />
+          </section>
+        )}
+
+      </body>
     );
   }
 }
