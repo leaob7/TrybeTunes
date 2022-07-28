@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
-  margin-top: 5em;
+  margin: 20vh auto;
+  padding: 1.5em;
   width: 80%;
 }
 
@@ -53,7 +53,6 @@
 @media screen and ( min-width : 1332px ) {
 
   .edit-user-form {
-    margin-top: 6em;
     width: 25%;
   }
 
