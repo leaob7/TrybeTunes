@@ -62,7 +62,7 @@ class Profile extends React.Component {
               Descrição
             </h4>
             { description
-              ? <h4>{description}</h4>
+              ? <h5>{description}</h5>
               : <p>
                 {`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Sed mattis commodo tortor,
