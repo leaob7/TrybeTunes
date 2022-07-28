@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 import '../styles/ProfileEdit/profile-edit.css';
-import { createUser } from '../services/userAPI';
+import { updateUser } from '../services/userAPI';
 
 class ProfileEdit extends React.Component {
   constructor() {
@@ -22,7 +22,7 @@ class ProfileEdit extends React.Component {
 
   handleSubmit = async () => {
     const { name, email, image, description } = this.state;
-    await createUser({ name, email, image, description });
+    await updateUser({ name, email, image, description });
     this.setState({ submit: true });
   }
 
@@ -63,7 +63,7 @@ class ProfileEdit extends React.Component {
               <p>Descrição</p>
               <textarea
                 id="description-area"
-                placeholder="Adicione uma descrição"
+                placeholder="Sobre mim"
                 name="description"
                 onChange={ this.handleUserValues }
               />

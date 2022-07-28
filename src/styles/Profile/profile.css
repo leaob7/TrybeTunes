@@ -1,16 +1,25 @@
 .profile-section {
-  border: 2px solid green;
+  align-self: center;
+  border: 2px solid rgb(30, 165, 48);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 70vh;
-  margin: auto;
-  margin-top: 3.5em;
+  margin: 20vh auto;
+  padding: 1.5em;
   width: 80%;
 }
 
+.profile-section h4, h5 {
+  margin: 10px 0 5px 20px;
+}
+
 .profile-section h4 {
-  margin: 10px 0 10px 20px;
+  color: rgb(30, 165, 48);
+}
+
+.profile-section h5 {
+  font-size: 1em;
+  font-weight: 400;
 }
 
 .edit-and-logo {
@@ -48,7 +57,6 @@
 @media screen and ( min-width : 1332px ) {
 
   .profile-section {
-    margin-top: 6em;
     width: 30%;
   }
 

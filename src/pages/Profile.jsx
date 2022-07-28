@@ -41,17 +41,28 @@ class Profile extends React.Component {
             </button>
           </div>
 
-          <h4>{ username }</h4>
+          <h4>Nome</h4>
+          <h5>{ username }</h5>
 
-          { email ? <h4>{ `Email: ${email}` }</h4>
-            : <h4>{ `Email: ${username}@email.com` }</h4>}
+          { email ? (
+            <>
+              <h4>Email</h4>
+              <h5>{email}</h5>
+            </>
+          )
+            : (
+              <>
+                <h4>Email</h4>
+                <h5>{ `${username}@email.com` }</h5>
+              </>
+            )}
 
           <div className="description">
             <h4>
-              Descrição:
+              Descrição
             </h4>
             { description
-              ? <h4>{description}</h4>
+              ? <p>{description}</p>
               : <p>
                 {`Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Sed mattis commodo tortor,
