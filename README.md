@@ -5,7 +5,7 @@ Projeto em React de uma aplicação capaz de reproduzir músicas das mais variad
 
 Acesse em :: https://leaob7-trybe-tunes.vercel.app/
 
-Observação :: Algumas features podem ter mal funcionamento em navegadores mobile. 
+Observação :: Algumas features de áudio podem ter mal funcionamento em navegadores mobile. 
 
 ---
 
