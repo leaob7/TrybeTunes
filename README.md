@@ -3,6 +3,10 @@
 
 Projeto em React de uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.
 
+Acesse em :: 
+
+Observação :: Algumas features podem ter mal funcionamento em navegadores mobile. 
+
 ---
 
 # Você é capaz de :
