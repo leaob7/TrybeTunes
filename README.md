@@ -3,7 +3,7 @@
 
 Projeto em React de uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.
 
-Acesse em :: 
+Acesse em :: https://leaob7-trybe-tunes.vercel.app/
 
 Observação :: Algumas features podem ter mal funcionamento em navegadores mobile. 
 
