@@ -67,7 +67,8 @@ class Album extends React.Component {
             artworkUrl100={ music.artworkUrl100 }
             checkObj={ infoList.filter((song) => song === music) }
           />
-        )) : null}
+        ))
+          : null}
       </section>
     );
   }
