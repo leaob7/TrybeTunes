@@ -37,6 +37,16 @@ Projeto em React de uma aplicação capaz de reproduzir músicas das mais variad
 
 ---
 
+# Demonstração
+
+<img src="./public/tunes-login.png" alt="login" />
+<img src="./public/search-album.png" alt="search" />
+<img src="./public/page-album.png" alt="album-page" />
+<img src="./public/favorites.png" alt="favorites" />
+<img src="./public/profile.png" alt="profile" />
+
+---
+
 # Autor
 
  - Linkedin : https://www.linkedin.com/in/guilherme-le%C3%A3o-dev/
