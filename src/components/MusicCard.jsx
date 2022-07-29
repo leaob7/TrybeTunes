@@ -23,15 +23,13 @@ export default class MusicCard extends React.Component {
   }
 
   render() {
-    const { id, trackName, previewUrl, artworkUrl100 } = this.props;
+    const { id, trackName, previewUrl } = this.props;
     return (
       <section key={ trackName } className="music-container">
 
         <h4>{trackName}</h4>
 
         <div className="song-and-fav">
-
-          <img src={ artworkUrl100 } alt={ trackName } />
 
           <audio data-testid="audio-component" src={ previewUrl } controls>
             <track kind="captions" />
@@ -60,5 +58,4 @@ MusicCard.propTypes = {
   id: PropTypes.string.isRequired,
   trackName: PropTypes.string.isRequired,
   previewUrl: PropTypes.string.isRequired,
-  artworkUrl100: PropTypes.string.isRequired,
 };

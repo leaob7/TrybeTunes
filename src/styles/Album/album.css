@@ -1,6 +1,45 @@
-.album-titles {
+.page-album {
+  padding-bottom: 4em;
+}
+
+.album-section {
   align-items: center;
   display: flex;
-  flex-direction: column;
-  margin: 40px;
+  margin: 4em auto;
+  padding: 3em 2em;
+  width: 80vw;
+}
+
+.album-section img {
+  height: 30vw;
+  width: 30vw;
+}
+
+.album-titles {
+  margin-left: 1.5em;
+}
+
+.album-titles h4 {
+  font-size: 3vw;
+}
+
+.album-titles h3 {
+  font-size: 5vw;
+}
+
+@media screen and ( min-width : 780px ) {
+
+  .album-titles h4 {
+    font-size: 2vw;
+  }
+
+  .album-titles h3 {
+    font-size: 4vw;
+  }
+
+  .album-section img {
+    height: 20vw;
+    width: 20vw;
+  }
+
 }

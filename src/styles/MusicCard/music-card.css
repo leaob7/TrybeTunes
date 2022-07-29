@@ -1,55 +1,47 @@
 .music-container {
   align-items: center;
+  background-color: rgb(30, 165, 48, 0.1);
   border: 2px solid rgb(30, 165, 48);
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  margin: auto;
+  justify-content: space-between;
+  margin: 0 4em;
   margin-bottom: 10px;
-}
-
-.music-container h4 {
-  margin: 20px 10px 0 7em;
-  text-align: center;
+  padding: 0.7em;
 }
 
 .song-and-fav {
-  align-items: center;
   display: flex;
-}
-
-.song-and-fav img {
-  height: 100%;
-  margin: 0 20px 20px 0;
+  justify-content: center;
 }
 
 .song-and-fav audio {
-  height: 30px;
-  margin-right: 25px;
-  width: 150px;
-}
-
-.song-and-fav label {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  height: 1.7em;
+  margin-right: 1em;
+  width: 7.5em;
 }
 
 .song-and-fav label input {
-  height: 30px;
+  height: 2em;
 }
 
 @media screen and ( min-width : 780px ) {
 
+  .song-and-fav audio {
+    height: 30px;
+    margin-right: 1em;
+    width: 10em;
+  }
+
   .music-container {
-    width: 50%;
+    margin: 0 10em;
+    margin-bottom: 10px;
   }
 }
 
 @media screen and ( min-width : 1332px ) {
 
-  .music-container {
-    width: 25%;
+  .song-and-fav audio {
+    margin-right: 3em;
   }
 }
-

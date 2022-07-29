@@ -7,6 +7,7 @@
   flex-direction: column;
   height: 5em;
   justify-content: center;
+  padding-bottom: 3em;
 }
 
 .header p {

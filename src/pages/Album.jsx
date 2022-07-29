@@ -39,16 +39,22 @@ class Album extends React.Component {
     if (loading) { <Loading />; }
 
     return (
-      <section data-testid="page-album">
+      <section data-testid="page-album" className="page-album">
         <Header />
         {isCalled && (
-          <section className="album-titles">
-            <h3 data-testid="artist-name">
-              {infoList[0].artistName}
-            </h3>
-            <h3 data-testid="album-name">
-              {infoList[0].collectionName}
-            </h3>
+          <section className="album-section">
+            <img src={ infoList[0].artworkUrl100 } alt="album-logo" />
+
+            <div className="album-titles">
+              <h3 data-testid="artist-name">
+                {infoList[0].collectionName}
+              </h3>
+
+              <h4 data-testid="album-name">
+                {infoList[0].artistName}
+              </h4>
+            </div>
+
           </section>
         )}
         {/* slice returns a copy of a section of an array */}
@@ -61,7 +67,8 @@ class Album extends React.Component {
             artworkUrl100={ music.artworkUrl100 }
             checkObj={ infoList.filter((song) => song === music) }
           />
-        )) : null}
+        ))
+          : null}
       </section>
     );
   }
