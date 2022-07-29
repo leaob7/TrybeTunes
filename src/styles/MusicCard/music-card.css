@@ -24,7 +24,7 @@
   height: 2em;
 }
 
-@media screen and ( max-width : 420px ) {
+@media screen and ( max-width : 280px ) {
 
   .song-and-fav audio {
     height: 30px;
