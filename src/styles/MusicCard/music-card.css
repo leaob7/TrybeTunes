@@ -10,6 +10,7 @@
 }
 
 .song-and-fav {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -20,14 +21,9 @@
   width: 7.5em;
 }
 
-.song-and-fav label input {
-  height: 2em;
-}
-
 @media screen and ( max-width : 280px ) {
 
   .song-and-fav audio {
-    height: 30px;
     margin-right: 1em;
     width: 6em;
   }
