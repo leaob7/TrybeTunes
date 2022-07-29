@@ -5,12 +5,12 @@
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  margin: 0 4em;
   margin-bottom: 10px;
   padding: 0.7em;
 }
 
 .song-and-fav {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -21,8 +21,21 @@
   width: 7.5em;
 }
 
-.song-and-fav label input {
-  height: 2em;
+@media screen and ( max-width : 280px ) {
+
+  .song-and-fav audio {
+    margin-right: 1em;
+    width: 6em;
+  }
+
+  .music-container {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .music-container h4 {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and ( min-width : 780px ) {
