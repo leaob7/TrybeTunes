@@ -44,6 +44,7 @@ class Header extends React.Component {
         <p data-testid="header-user-name">
           { nome }
         </p>
+
         <nav className="nav-container">
           <Link
             to="/search"
@@ -74,6 +75,10 @@ class Header extends React.Component {
             Perfil
           </Link>
         </nav>
+
+        <h5>
+          Algumas features de áudio podem ter mal funcionamento em navegadores mobile.
+        </h5>
 
       </header>
     );
