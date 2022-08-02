@@ -37,14 +37,25 @@ export default class MusicCard extends React.Component {
             <code>audio</code>
           </audio>
 
-          <label htmlFor="favorita">
-            <input
-              id="favorita"
+          { window.location.pathname === '/favorites' ? (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+            <img
+              src="../remove-icon.png"
               data-testid={ `checkbox-music-${id}` }
-              type="checkbox"
-              onChange={ this.onClick }
+              onClick={ this.onClick }
+              alt="remove-favorite"
+              title="Remover favorito"
             />
-          </label>
+          ) : (
+            <label htmlFor="favorita">
+              <input
+                id="favorita"
+                data-testid={ `checkbox-music-${id}` }
+                type="checkbox"
+                onChange={ this.onClick }
+              />
+            </label>
+          ) }
 
         </div>
 

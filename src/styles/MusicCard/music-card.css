@@ -15,6 +15,12 @@
   justify-content: center;
 }
 
+.song-and-fav img {
+  border-radius: 1.5em;
+  cursor: pointer;
+  width: 1.5em;
+}
+
 .song-and-fav audio {
   height: 1.7em;
   margin-right: 1em;
